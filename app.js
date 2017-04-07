@@ -1,4 +1,5 @@
 
+
 //Opening a New Window
 function open1(){
 window.open("index1.html");
@@ -123,12 +124,14 @@ function load1(){
 	document.getElementById('contain').style.display ="none";
 	document.getElementById('footer').style.display ="none";
 	if(result>=14 && counter <=0){
-	document.getElementById("result").innerHTML="Time's UP !"+"<br>"+"<h2>CONGRATULATIONS!</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %";
+	document.getElementById("result").innerHTML="Time's UP !"+"<br>"+"<h2>CONGRATULATIONS!</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %"+"<br>"+"<img src='images/happy.png'>";
+	document.getElementById("image").innerHTML="<img src='images/happy.png>";
 	document.getElementById("close").innerHTML="<button onclick='close1()'>CLOSE</button>";
 	document.getElementById("restart").innerHTML="<form action='index.html' method='post'>"+"<button>RESTART QUIZ</button>"+"<form>";
 	}
 	else{
-		document.getElementById("result").innerHTML="SORRY ! Time's UP !"+"<br>"+"<h2>BETTER LUCK NEXT TIME</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %";
+		document.getElementById("result").innerHTML="SORRY ! Time's UP !"+"<br>"+"<h2>BETTER LUCK NEXT TIME</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %"+"<br>"+"<img src='images/sad.png'>";
+		document.getElementById("image").innerHTML="<img src='images/sad.png>";
 		document.getElementById("close").innerHTML="<button onclick='close1()'>CLOSE</button>";
 		document.getElementById("restart").innerHTML="<form action='index.html' method='post'>"+"<button>RESTART QUIZ</button>"+"<form>";
 	}
@@ -180,16 +183,17 @@ if(recent_ques==numberof_question){
 	document.getElementById('contain').style.display ="none";
 	document.getElementById('footer').style.display ="none";
 	if(result>=14){
-	document.getElementById("result").innerHTML="<h2>CONGRATULATIONS !</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %";
+	document.getElementById("result").innerHTML="<h2>CONGRATULATIONS !</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %"+"<br>"+
+	"<img src='images/happy.png'>";
 	document.getElementById("close").innerHTML="<button onclick='close1()'>CLOSE</button>";
 	document.getElementById("restart").innerHTML="<form action='index.html' method='post'>"+"<button>RESTART QUIZ</button>"+"<form>";
 	counter="none";
 	}
 	else{
-		document.getElementById("result").innerHTML="<h2>SORRY ! BETTER LUCK NEXT TIME</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %";
+		document.getElementById("result").innerHTML="<h2>SORRY ! BETTER LUCK NEXT TIME</h2>"+"Your Score Is:"+"<br>"+result+"<br>"+(result/20)*100 +" %"+"<br>"+"<img src='images/sad.png'>";
 		document.getElementById("close").innerHTML="<button onclick='close1()'>CLOSE</button>";
 		document.getElementById("restart").innerHTML="<form action='index.html' method='post'>"+"<button>RESTART QUIZ</button>"+"<form>";
-		counter="none";
+			counter="none";
 	}
 	
 }
@@ -200,4 +204,6 @@ display(recent_ques);
 
 display(recent_ques);
 timer();
+
+
 
